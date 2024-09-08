@@ -1,0 +1,614 @@
+html{
+    direction:ltr;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform:capitalize;
+}
+.Hero-yaxis{
+    position:absolute;
+    top:50%;
+    transform:translate(0%,-50%);
+}
+.hero-xaxis{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%,0%);
+}
+.hero{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.section-line{
+    border:solid 3px rgb(211, 169, 113);
+}
+.parent-headline{
+    text-align: center;
+    position: absolute;
+    top:10%;
+    color:rgb(34, 26, 15);
+}
+.underline-headline    /*and give it hero-xaxis class*/
+{
+    border:solid 2px rgb(211, 169, 113);
+    top:18%;
+    width:100px;
+}
+.middle-grandchild{
+    margin:0 5%;
+}
+.parent{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.child{
+    width:80%;
+    overflow: auto;
+    top:60%;
+}
+.grandchild{
+    float:left;
+    width:30%;
+    position: relative;
+}
+/* ///////////////////////////////////////////////Header//////////////////////////////////////////////////////////// */
+.header{
+    position:fixed;
+    height:55px;
+    width:99.5%;
+    top:2px;
+    z-index: 100;
+    background-color:rgba(200, 200, 200, 0.692);
+    overflow:auto;
+    border-radius: 2px;
+}
+.header img{
+    float:left;
+    height:54px;
+    width:75px;
+    margin-left:10px;
+}
+.hero-header-ul{
+    right:0%;
+}
+.header li{
+    color:white;
+    display:inline-block;
+    list-style: none;
+    margin:0 10px;
+    font-size:16px;
+    position: relative;
+}
+.header li:after{
+    position: absolute;
+    content: "";
+    background-color: rgb(211, 169, 113);
+    width:0;
+    height:3px;
+    bottom:-3px;
+    left:9%;
+    visibility: hidden;
+}
+.header li:hover::after{
+    visibility: visible;
+    width:80%;
+    transition:1s;
+}
+/* /////////////////////////////////////////////////Section one/////////////////////////////////////////////// */
+.parent-sec1{
+    background-image: url(../image/image4.jpeg);
+    background-size:cover;
+}
+.sec1{
+    text-align: center;
+    color:white;
+    position: absolute;
+    z-index: 1; 
+}
+.overlay-sec1{
+    z-index:0;
+    background-color: rgba(44, 39, 39, 0.5);
+}
+.sec1 h1{
+    font-size: 50px;
+}
+.sec1 h3{
+    line-height:35px;
+    background-color: rgba(211, 169, 113, 0.6);
+    width:200px;
+    margin:10px auto;
+}
+.sec1 button{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    border: 0;
+    border-radius:4px;
+    margin-left:5px;
+    font-size: 14px;
+
+}
+.btn-sec1{
+    background-color: rgb(211, 169, 113);
+}
+.sec1 button:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    background-color: rgba(77, 67, 67, 0.253);
+    visibility: hidden;
+    width: 100%;
+    height:100%;
+}
+.sec1 button:hover::after{
+    cursor: pointer;
+    visibility: visible;
+}
+/* ////////////////////////////////////////////////////section two///////////////////////////////////////////////////////////// */
+.parent-sec2{
+    background-color: rgba(211, 169, 113,0.07);
+}
+.grandchild-sec2{
+    text-align: center;
+    border: rgba(165, 164, 164, 0.9) solid 0.8px;
+    padding:10px;
+}
+.grandchild-sec2 i{
+    color:rgb(211, 169, 113);
+    font-size: 50px;
+    margin:10px 0;
+}
+.grandchild-sec2 h1 , .grandchild-sec2 p{
+    color:rgb(34, 26, 15);
+    margin:10px 0;
+}
+.grandchild-sec2 a{
+    text-decoration: none;
+    color:rgb(211, 169, 113);
+}
+.grandchild-sec2:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    background-color: rgb(211, 169, 113);
+    opacity:0;
+    z-index: 0;
+}
+.grandchild-sec2:hover::after{
+    width:100%;
+    height:100%;
+    transition:0.5s;
+    opacity: 1;
+}
+.grandchild-sec2:hover i,.grandchild-sec2:hover a{
+    color:white;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.grandchild-sec2:hover p,.grandchild-sec2:hover h1  {
+    position: relative;
+    z-index: 1;
+}
+/* /////////////////////////////////////////////////section three////////////////////////////////////////////////////////////////// */
+.parent-sec3{
+    height: 130vh;
+    background-color: rgba(228, 220, 210, 0.07);
+}
+.child-sec3{
+    width:90%;
+}
+.grandchild-sec3{
+    height:270px;
+    background-color: rgba(211, 169, 113,0.1);
+}
+.grandchild-sec3 img{
+    width:95%;
+    height:95%;
+}
+.overlay-sec3{
+    background-color: rgba(58, 53, 40, 0);
+    color:white;
+    text-align: center;
+    visibility: hidden;
+}
+.grandchild-sec3:hover .overlay-sec3{
+    background-color: rgba(58, 53, 40, 0.6);
+    visibility: visible;
+    transition: 1s;
+}
+.overlay-sec3 a{
+    background-color: rgb(211, 169, 113);
+    font-size:20px;
+    display: inline-block;
+    padding:5px;
+    color:white;
+}
+.sec3-hr{
+    top:15%;
+}
+/* //////////////////////////////////////////////section four////////////////////////////////////////////////////////// */
+.parent-sec4{
+    background-color: rgba(211, 169, 113,0.07);
+}
+.child-sec4{
+    top:55%;
+}
+.grandchild-sec4{
+    border: rgba(165, 164, 164, 0.9) solid 0.8px;
+    height: 170px;
+    margin-top: 40px;
+    z-index: 1;
+}
+.content-sec4{
+    overflow:auto;
+    padding: 10px;
+}
+.content-sec4 h1 i{
+    float: left;
+    color:rgb(211, 169, 113);
+    width:20%;
+    position: relative;
+    z-index: 1;
+}
+.content-sec4 h1{
+    text-align: center;
+}
+.text-sec4{
+    float:left;
+    color:rgb(61, 56, 49);
+    width:80%;
+    position: relative;
+    z-index: 1;
+}
+.text-sec4 h2{
+    color:rgb(211, 169, 113);
+}
+.grandchild-sec4:hover .text-sec4 h2,.grandchild-sec4:hover .content-sec4 h1 i{
+    color:white;
+    transition: 0.5s;
+}
+.grandchild-sec4:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    background-color: rgb(211, 169, 113);
+    z-index: 0;
+}
+.grandchild-sec4:hover::after{
+    height:100%;
+    width:100%;
+    transition: 0.5s;
+}
+/* /////////////////////////////////////////////section five///////////////////////////////////////////////////////////// */
+.parent-sec5{
+    background-color: rgba(211, 169, 113,0.07);
+}
+.child-sec5{
+    height:90%;
+    top:50%;
+    padding:10px;
+    position: relative;
+}
+.text-sec5{
+    height:95%;
+    width:55%;
+    float:left;
+    position: relative;
+    margin-right: 5%;
+}
+.child-sec5 .list-sec5{
+    position: absolute;
+    top:94%;
+    left:80%;
+    z-index: 6;
+    transform: translate(-50%,0);
+}
+.child-sec5 .list-sec5 li{
+    display:inline-block;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width:8px;
+    height:8px;
+    margin:0 6px;
+}
+.child-sec5 .list-sec5 .first-li-sec5{
+    background-color: rgb(211, 169, 113);
+}
+.list-sec5 li:hover{
+    background-color: rgb(211, 169, 113);
+    cursor: pointer;
+}
+.child-sec5 img{
+    position: relative;
+    z-index: 1;
+    width:40%;
+    height:95%;
+    float:left;
+}
+.text-sec5 p{
+    padding: 20px;
+}
+.child-sec5 i{
+    padding:10px ;
+    color:rgb(211, 169, 113);
+}
+
+/* ///////////////////////////////////section six///////////////////////////////////////////////////////////////////////// */
+.parent-sec6{
+    height:50vh;
+    background-image:url(../image/image6.jpg);
+    background-attachment: fixed ;
+    background-size: cover;
+}
+.parent-sec6:after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.child-sec6{
+    z-index:1;
+    top:50%;
+}
+.grandchild-sec6{
+    width:20%;
+    font-size:x-large;
+    text-align: center;
+    color: white;
+    float:left;
+}
+.grandchild-sec6 h1 i{
+    color:rgb(211, 169, 113);
+}
+/* /////////////////////////////////////section seven/////////////////////////////////////////////////////////////////// */
+.parent-sec7{
+    background-color: rgba(211, 169, 113,0.07);
+}
+.grandchild-sec7{
+    text-align: center;
+    border: rgba(165, 164, 164, 0.9) solid 0.8px;
+    padding: 20px;
+    background-color: rgba(211, 169, 113,0.07);
+}
+.circle-sec7{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    border: rgba(165, 164, 164, 0.9) solid 0.8px;
+    font-size: 15px;
+    margin: 20px auto;
+    position: relative;
+}
+.circle-sec7 b{
+    font-size: 30px;
+}
+.grandchild-sec7 p{
+    padding: 20px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.btn-sec7{
+    width:30%;
+    height:40px;
+    border: rgba(165, 164, 164, 0.9) solid 0.8px;
+    background-color: white;
+}
+.grandchild-sec7:after{
+    content: "";
+    width:100%;
+    top:0;
+    left:0;
+    height:0;
+    position: absolute;
+    background-color: rgba(58, 53, 40, 0.4);
+    z-index: 1;
+}
+.grandchild-sec7:hover::after{
+    height:100%;
+    transition: 0.5s;
+}
+.grandchild-sec7:hover .circle-sec7{
+    color:rgb(211, 169, 113);
+    transition: 1s;
+}
+.grandchild-sec7:hover h2{
+    color:rgb(211, 169, 113);
+}
+/* ////////////////////////////////////////section eight//////////////////////////////////////////////////////////// */
+.parent-sec8{
+    height: 50vh;
+    background-image: url(../image/image.avif);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.parent-sec8:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(58, 53, 40, 0.4);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 0;
+}
+.child-sec8{
+    top:50%;
+    position: relative;
+    z-index:2;
+}
+.grandchild-sec8{
+    width:45%;
+    float: left;
+}
+.grandchild-sec8 img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    float: left;
+}
+.grandchild-sec8-text1{
+    height:100px;
+    color: white;
+    float: left;
+    margin-left:20px;
+}
+.middle-grandchild-sec8{
+    margin-left: 10%;
+}
+.sec8-container1{
+    overflow: auto;
+}
+.grandchild-sec8-text1 span{
+    display: block;
+    margin-top:10px;
+    color:rgb(235, 201, 158);
+}
+.grandchild-sec8 p{
+    padding: 10px;
+    color: white;
+}
+/* //////////////////////////////////////section nine///////////////////////////////////////////////////////////////// */
+.parent-sec9{
+    background-color: rgba(211, 169, 113,0.07);
+}
+.grandchild-sec9{
+    background-color: rgba(211, 169, 113,0.2);
+    text-align:center;
+}
+.img-sec9{
+    width:94%;
+    margin:10px 3%;
+    position: relative;
+    height: 300px;
+}
+.img-sec9 img{
+    width:100%;
+    height:100%;
+}
+.overlay-sec9{
+    background-color: rgba(58, 53, 40, 0.4);
+    visibility: hidden;
+}
+.overlay-sec9 a{
+    color:white;
+    display: block;
+    margin-left: auto;
+    width:40px;
+    height: 40px;
+    background-color: rgb(235, 201, 158);
+    text-align: center;
+}
+.overlay-sec9 a i{
+    line-height:40px ;
+}
+.grandchild-sec9:hover .overlay-sec9{
+    visibility: visible;
+}
+.grandchild-sec9 h3{
+    color:rgb(27, 22, 22);
+}
+.grandchild-sec9:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+    background-color: rgba(58, 53, 40, 0.7);
+}
+.grandchild-sec9:hover::after{
+    height:100%;
+    transition: 1.5s;
+}
+.grandchild-sec9:hover h3,.grandchild-sec9:hover p{
+    color:rgb(189, 129, 52);
+    transition:1s;
+}
+.grandchild-sec9 h3,.grandchild-sec9 p{
+    padding: 5px;
+}
+/* ////////////////////////////////////section ten////////////////////////////////////////////////////////////////// */
+.child-sec10{
+    background-color: rgba(211, 169, 113,0.2);
+}
+.grandchild-sec10{
+    background-color: white;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.grandchild-sec10 img{
+    width:90%;
+    margin:0 5%;
+    height:200px;
+    margin-bottom: 5px;
+}
+.grandchild-sec10 i,.grandchild-sec10 a{
+    color:rgb(189, 129, 52);
+}
+.grandchild-sec10 h3{
+    margin:10px 0;
+}
+.grandchild-sec10:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+}
+.grandchild-sec10:hover::after{
+    background-color: rgba(211, 169, 113,0.5);
+    height:100%;
+    transition: 1s;
+}
+/* //////////////////////////////footer////////////////////////////////////////////////////////////////////////////////// */
+.parent-footer{
+    height:60vh;
+    background-color: rgba(139, 108, 66, 0.7);
+}
+.child-footer img{
+    width:240px;
+    height:200px;
+    margin: auto;
+    display: block;
+}
+.child-footer div{
+    font-size: 19px;
+    text-align: center;
+    color:rgb(211, 169, 113);
+}
+.child-footer div i{
+    font-size: 35px;
+    margin: 8px;
+}
+.child-footer a{
+    color:rgb(211, 169, 113);
+}
+.child-footer p{
+    color:white;
+}
